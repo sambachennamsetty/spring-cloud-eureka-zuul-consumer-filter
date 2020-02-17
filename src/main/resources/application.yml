@@ -1,0 +1,11 @@
+server:
+  port: 9944
+spring:
+  application:
+    name: STUDENT-CONSUMER
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka
+  instance:
+    instance-id: ${spring.application.name}:${random.value}
